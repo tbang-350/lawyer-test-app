@@ -1,14 +1,8 @@
 import './bootstrap';
-import '../css/app.css'; // Make sure this is present
-import '@fullcalendar/core/main.css'; // Import FullCalendar CSS
-// ... other imports
-
-
-import { Calendar } from '@fullcalendar/core';
+import '../css/app.css';
 import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
-import '@fullcalendar/core/main.css'; // Import the CSS
 
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
