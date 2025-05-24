@@ -1,0 +1,48 @@
+/* FullCalendar Styles */
+.fc {
+    --fc-border-color: #e5e7eb;
+    --fc-button-text-color: #fff;
+    --fc-button-bg-color: #4f46e5;
+    --fc-button-border-color: #4f46e5;
+    --fc-button-hover-bg-color: #4338ca;
+    --fc-button-hover-border-color: #4338ca;
+    --fc-button-active-bg-color: #3730a3;
+    --fc-button-active-border-color: #3730a3;
+    --fc-event-bg-color: #4f46e5;
+    --fc-event-border-color: #4338ca;
+    --fc-event-text-color: #fff;
+    --fc-today-bg-color: #f3f4f6;
+}
+
+.fc .fc-button {
+    @apply px-4 py-2 rounded-md font-medium text-sm;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+    @apply bg-indigo-700;
+}
+
+.fc .fc-event {
+    @apply cursor-pointer;
+}
+
+.fc .fc-event:hover {
+    @apply opacity-90;
+}
+
+.fc .fc-day-today {
+    @apply bg-gray-50;
+}
+
+.fc .fc-toolbar-title {
+    @apply text-xl font-semibold;
+}
+
+.fc .fc-col-header-cell {
+    @apply py-2;
+}
+
+.fc .fc-daygrid-day-number {
+    @apply text-sm text-gray-600;
+}

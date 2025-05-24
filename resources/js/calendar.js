@@ -1,8 +1,12 @@
-import 'fullcalendar/main.css';
-import { Calendar } from 'fullcalendar';
+import '@fullcalendar/core/index.css';
+import '@fullcalendar/daygrid/index.css';
+import '@fullcalendar/timegrid/index.css';
+import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import listPlugin from '@fullcalendar/list';
+import '../css/calendar.css';
 
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
@@ -17,14 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Helper function to clear and populate the modal form
     var calendar = new Calendar(calendarEl, {
-        plugins: [ dayGridPlugin, timeGridPlugin, interactionPlugin ],
+        plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin],
         initialView: 'dayGridMonth',
         headerToolbar: {
             left: 'prev,next today',
             center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
         },
-        events: '/api/appointments', // Fetch appointments from this endpoint
+        events: '/api/appointments',
         dateClick: function(info) {
             currentAppointmentId = null; // Clear current appointment ID for new appointment
             modalTitle.textContent = 'Add New Appointment';
